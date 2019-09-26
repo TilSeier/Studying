@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tilseier.studying">
+
+    <application
+        android:name="com.tilseier.studying.screens.dagger.di3.RandomUserApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.tilseier.studying.screens.save_instance_state.SaveStateActivity"/>
+        <activity android:name="com.tilseier.studying.screens.constraint_features.ConstraintSetsActivity" />
+        <activity android:name="com.tilseier.studying.screens.constraint_features.ConstraintFeaturesActivity" />
+        <activity android:name="com.tilseier.studying.screens.files.FilesActivity" />
+        <activity android:name="com.tilseier.studying.screens.fragments.FragmentActivity" />
+        <activity
+            android:name="com.tilseier.studying.screens.ai.emotion_recognizer.EmotionRecognizerActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name="com.tilseier.studying.screens.ai.face_recognizer.FaceRecognizerActivity" />
+        <activity android:name="com.tilseier.studying.screens.retrofit.RetrofitActivity" />
+        <activity android:name="com.tilseier.studying.screens.dagger.DaggerActivity3" />
+        <activity android:name="com.tilseier.studying.screens.dagger.DaggerActivity2" />
+        <activity android:name="com.tilseier.studying.screens.dagger.DaggerActivity" />
+        <activity android:name="com.tilseier.studying.screens.rxjava.RxActivity" />
+        <activity android:name="com.tilseier.studying.screens.eventbus.PublisherActivity" />
+        <activity android:name="com.tilseier.studying.screens.service.ServiceActivity" />
+        <activity
+            android:name="com.tilseier.studying.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.tilseier.studying.screens.service.MyService" />
+        <service
+            android:name="com.tilseier.studying.screens.service.MyIntentService"
+            android:exported="false" />
+        <service
+            android:name="com.tilseier.studying.screens.service.MyJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+</manifest>

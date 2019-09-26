@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".screens.ai.emotion_recognizer.EmotionRecognizerActivity"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView1"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/btn_browse_picture"
+        android:contentDescription="Image with faces to analyze"/>
+
+    <Button
+        android:id="@+id/btn_browse_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_process_picture"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/style_button_2"
+        android:text="Browse for a face image"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_process_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Process"
+        android:background="@drawable/style_button_1"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+</RelativeLayout>

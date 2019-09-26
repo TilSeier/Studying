@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.rxjava.RxActivity">
+
+    <Button
+        android:id="@+id/btn_rx_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onRxSimpleClick"
+        android:text="Rx Simple" />
+
+    <Button
+        android:id="@+id/btn_rx_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onRxCountClick"
+        android:text="Rx Observable Count" />
+
+    <Button
+        android:id="@+id/btn_rx_flowable_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onRxFlowableCountClick"
+        android:text="Rx Flowable Count" />
+
+    <Button
+        android:id="@+id/btn_rx_single_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onRxSingleClick"
+        android:text="Rx Single Count" />
+
+    <Button
+        android:id="@+id/btn_rx_complete_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onRxCompleteClick"
+        android:text="Rx Complete Count" />
+
+    <Button
+        android:id="@+id/btn_rx_maybe_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onRxMaybeClick"
+        android:text="Rx Maybe Count" />
+
+    <Button
+        android:id="@+id/btn_rx_maps_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onRxMapsClick"
+        android:text="Rx Maps Count" />
+
+</LinearLayout>

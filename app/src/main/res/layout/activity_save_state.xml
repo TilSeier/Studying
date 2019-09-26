@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.save_instance_state.SaveStateActivity">
+
+    <TextView
+        android:id="@+id/tv_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unknown Activity"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unknown Name"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_user_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unknown Age"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_user_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unknown Gender"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone number"
+        android:inputType="phone" />
+
+
+    <TextView
+        android:id="@+id/tv_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/btn_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COUNT UP" />
+
+</LinearLayout>

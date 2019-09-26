@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:scrollbars="vertical" />
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_services"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnServicesClick"-->
+<!--        android:text="Services"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_observer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnObserverClick"-->
+<!--        android:text="Observer"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_event_bus"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnEventBusClick"-->
+<!--        android:text="EventBus"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_singleton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnSingletonClick"-->
+<!--        android:text="Singleton"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_sort"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnSortClick"-->
+<!--        android:text="Sort"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_rx_java"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onRxJavaClick"-->
+<!--        android:text="Rx Java"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_dagger"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnDaggerClick"-->
+<!--        android:text="Dagger"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_retrofit"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnRetrofitClick"-->
+<!--        android:text="Retrofit"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_collection"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnCollectionClick"-->
+<!--        android:text="Collection"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_fragments"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnFragmentsClick"-->
+<!--        android:text="Fragments"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_files"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnFilesClick"-->
+<!--        android:text="Files"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_constraint_feature"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnConstraintFeaturesClick"-->
+<!--        android:text="Constraint Feature"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_constraint_sets"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnConstraintSetsClick"-->
+<!--        android:text="Constraint Sets"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_ai_emotion_recognizer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnAIEmotionRecognizerClick"-->
+<!--        android:text="AI Emotions Recognizer"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_ai_face_recognizer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="onBtnAIFaceRecognizerClick"-->
+<!--        android:text="AI Face Recognizer"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold" />-->
+
+</LinearLayout>
