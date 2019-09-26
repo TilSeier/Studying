@@ -26,6 +26,10 @@ android {
     aaptOptions {
         additionalParameters "--warn-manifest-validation"
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 
 //    splits {
 //        abi {

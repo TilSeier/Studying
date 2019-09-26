@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-//import com.hariofspades.dagger2advanced.MainActivity;
+//import com.hariofspades.dagger2advanced.StateLossActivity;
 //import com.hariofspades.dagger2advanced.R;
 //import com.hariofspades.dagger2advanced.model.Result;
 import com.squareup.picasso.Picasso;

@@ -21,6 +21,7 @@ import com.tilseier.studying.screens.dagger.DaggerActivity3;
 import com.tilseier.studying.screens.eventbus.CustomMessageEvent;
 import com.tilseier.studying.screens.eventbus.PublisherActivity;
 import com.tilseier.studying.screens.files.FilesActivity;
+import com.tilseier.studying.screens.fragment_state_loss.StateLossActivity;
 import com.tilseier.studying.screens.fragments.FragmentActivity;
 import com.tilseier.studying.screens.observer.JobSearch;
 import com.tilseier.studying.screens.retrofit.RetrofitActivity;
@@ -41,7 +42,7 @@ import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements MainMenuItemsAdapter.MainMenuItemsListener {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "StateLossActivity";
 
     RecyclerView rvMainMenu;
     MainMenuItemsAdapter adapter;
@@ -64,97 +65,28 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
                 onBtnServicesClick(view);
             }
         }, "onBtnServicesClick"));
-        mainMenuItems.add(new MainMenuItem("Observer", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnObserverClick(view);
-            }
+        mainMenuItems.add(new MainMenuItem("Observer", view -> {
+            int example = 0;
+            onBtnObserverClick(view);
         }, "onBtnObserverClick"));
-        mainMenuItems.add(new MainMenuItem("EventBus", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnEventBusClick(view);
-            }
-        }, "onBtnEventBusClick"));
-        mainMenuItems.add(new MainMenuItem("Singleton", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnSingletonClick(view);
-            }
-        }, "onBtnSingletonClick"));
-        mainMenuItems.add(new MainMenuItem("Sort", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnSortClick(view);
-            }
-        }, "onBtnSortClick"));
-        mainMenuItems.add(new MainMenuItem("Rx Java", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onRxJavaClick(view);
-            }
-        }, "onRxJavaClick"));
-        mainMenuItems.add(new MainMenuItem("Dagger", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnDaggerClick(view);
-            }
-        }, "onBtnDaggerClick"));
-        mainMenuItems.add(new MainMenuItem("Retrofit", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnRetrofitClick(view);
-            }
-        }, "onBtnRetrofitClick"));
-        mainMenuItems.add(new MainMenuItem("Collection", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnCollectionClick(view);
-            }
-        }, "onBtnCollectionClick"));
-        mainMenuItems.add(new MainMenuItem("Fragments", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnFragmentsClick(view);
-            }
-        }, "onBtnFragmentsClick"));
-        mainMenuItems.add(new MainMenuItem("Files", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnFilesClick(view);
-            }
-        }, "onBtnFilesClick"));
-        mainMenuItems.add(new MainMenuItem("Constraint Feature", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnConstraintFeaturesClick(view);
-            }
-        }, "onBtnConstraintFeaturesClick"));
-        mainMenuItems.add(new MainMenuItem("Constraint Sets", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnConstraintSetsClick(view);
-            }
-        }, "onBtnConstraintSetsClick"));
-        mainMenuItems.add(new MainMenuItem("AI Emotions Recognizer", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnAIEmotionRecognizerClick(view);
-            }
-        }, "onBtnAIEmotionRecognizerClick"));
-        mainMenuItems.add(new MainMenuItem("AI Face Recognizer", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnAIFaceRecognizerClick(view);
-            }
-        }, "onBtnAIFaceRecognizerClick"));
+        
+        mainMenuItems.add(new MainMenuItem("EventBus", this::onBtnEventBusClick, "onBtnEventBusClick"));
+        mainMenuItems.add(new MainMenuItem("Singleton", this::onBtnSingletonClick, "onBtnSingletonClick"));
+        mainMenuItems.add(new MainMenuItem("Sort", this::onBtnSortClick, "onBtnSortClick"));
+        mainMenuItems.add(new MainMenuItem("Rx Java", this::onRxJavaClick, "onRxJavaClick"));
+        mainMenuItems.add(new MainMenuItem("Dagger", this::onBtnDaggerClick, "onBtnDaggerClick"));
+        mainMenuItems.add(new MainMenuItem("Retrofit", this::onBtnRetrofitClick, "onBtnRetrofitClick"));
+        mainMenuItems.add(new MainMenuItem("Collection", this::onBtnCollectionClick, "onBtnCollectionClick"));
+        mainMenuItems.add(new MainMenuItem("Fragments", this::onBtnFragmentsClick, "onBtnFragmentsClick"));
+        mainMenuItems.add(new MainMenuItem("Files", this::onBtnFilesClick, "onBtnFilesClick"));
+        mainMenuItems.add(new MainMenuItem("Constraint Feature", this::onBtnConstraintFeaturesClick, "onBtnConstraintFeaturesClick"));
+        mainMenuItems.add(new MainMenuItem("Constraint Sets", this::onBtnConstraintSetsClick, "onBtnConstraintSetsClick"));
+        mainMenuItems.add(new MainMenuItem("AI Emotions Recognizer", this::onBtnAIEmotionRecognizerClick, "onBtnAIEmotionRecognizerClick"));
+        mainMenuItems.add(new MainMenuItem("AI Face Recognizer", this::onBtnAIFaceRecognizerClick, "onBtnAIFaceRecognizerClick"));
 
-        mainMenuItems.add(new MainMenuItem("Save State + Parcelable", new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBtnAIFaceRecognizerClick(view);
-            }
-        }, "onBtnSaveStateClick"));
+        mainMenuItems.add(new MainMenuItem("Save State + Parcelable", this::onBtnSaveStateClick, "onBtnSaveStateClick"));
+
+        mainMenuItems.add(new MainMenuItem("Fragment StateLoss", this::onBtnStateLossClick, "onBtnStateLossClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -172,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 //
 //                Method method;
 //                try {
-//                    method = Class.forName("MainActivity").getMethod(methodName, View.class);
+//                    method = Class.forName("StateLossActivity").getMethod(methodName, View.class);
 //                    method.invoke(this, view);
 //                } catch (SecurityException | NoSuchMethodException ignored) {
 //
@@ -395,7 +327,12 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         Intent intent = new Intent(this, SaveStateActivity.class);
 
         intent.putExtra("user", new UserModel(1, 40, "Chris Pratt", "man"));
-        intent.putExtra("activity", "MainActivity");
+        intent.putExtra("activity", "StateLossActivity");
+        startActivity(intent);
+    }
+
+    public void onBtnStateLossClick(View view){
+        Intent intent = new Intent(this, StateLossActivity.class);
         startActivity(intent);
     }
 
