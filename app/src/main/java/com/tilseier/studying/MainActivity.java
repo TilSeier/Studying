@@ -21,6 +21,7 @@ import com.tilseier.studying.screens.dagger.DaggerActivity3;
 import com.tilseier.studying.screens.eventbus.CustomMessageEvent;
 import com.tilseier.studying.screens.eventbus.PublisherActivity;
 import com.tilseier.studying.screens.files.FilesActivity;
+import com.tilseier.studying.screens.fragment_back_stack.FragmentBackStackActivity;
 import com.tilseier.studying.screens.fragment_state_loss.StateLossActivity;
 import com.tilseier.studying.screens.fragments.FragmentActivity;
 import com.tilseier.studying.screens.observer.JobSearch;
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Save State + Parcelable", this::onBtnSaveStateClick, "onBtnSaveStateClick"));
 
         mainMenuItems.add(new MainMenuItem("Fragment StateLoss", this::onBtnStateLossClick, "onBtnStateLossClick"));
+        mainMenuItems.add(new MainMenuItem("Fragment BackStack", this::onBtnFragmentBackStackClick, "onBtnFragmentBackStackClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -333,6 +335,11 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
     public void onBtnStateLossClick(View view){
         Intent intent = new Intent(this, StateLossActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnFragmentBackStackClick(View view){
+        Intent intent = new Intent(this, FragmentBackStackActivity.class);
         startActivity(intent);
     }
 

@@ -16,6 +16,7 @@
             android:name="com.tilseier.studying.screens.save_instance_state.SaveStateActivity"/>
         <activity android:name="com.tilseier.studying.screens.fragment_state_loss.StateLossActivity" />
         <activity android:name="com.tilseier.studying.screens.fragment_state_loss.StateLossSecondActivity" />
+        <activity android:name="com.tilseier.studying.screens.fragment_back_stack.FragmentBackStackActivity" />
         <activity android:name="com.tilseier.studying.screens.constraint_features.ConstraintSetsActivity" />
         <activity android:name="com.tilseier.studying.screens.constraint_features.ConstraintFeaturesActivity" />
         <activity android:name="com.tilseier.studying.screens.files.FilesActivity" />
