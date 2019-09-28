@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tilseier.studying.screens.job_schedulers.alarm_manager.AlarmManagerActivity">
+
+    <TextView
+        android:id="@+id/tv_alarm_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:layout_alignParentTop="true"
+        android:text="No Alarm Set" />
+
+    <Button
+        android:id="@+id/btn_start_alarm_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_alarm_manager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:onClick="onPickTimeClick"
+        android:text="Open Time Picker" />
+
+    <Button
+        android:id="@+id/btn_stop_alarm_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_start_alarm_manager"
+        android:layout_marginTop="100dp"
+        android:onClick="onStopAlarmManagerClick"
+        android:text="Stop Alarm Manager" />
+
+</RelativeLayout>

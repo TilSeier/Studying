@@ -4,7 +4,7 @@
     package="com.tilseier.studying">
 
     <application
-        android:name="com.tilseier.studying.screens.dagger.di3.RandomUserApplication"
+        android:name=".screens.dagger.di3.RandomUserApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,17 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".screens.job_schedulers.alarm_manager.AlarmManagerActivity"></activity>
+        <activity android:name=".screens.job_schedulers.job_scheduler.JobSchedulerActivity" />
+        <activity android:name=".screens.thread.ThreadActivity" />
+        <activity android:name=".screens.save_instance_state.SaveStateActivity" />
+        <activity android:name=".screens.fragment_state_loss.StateLossActivity" />
+        <activity android:name=".screens.fragment_state_loss.StateLossSecondActivity" />
+        <activity android:name=".screens.fragment_back_stack.FragmentBackStackActivity" />
+        <activity android:name=".screens.constraint_features.ConstraintSetsActivity" />
+        <activity android:name=".screens.constraint_features.ConstraintFeaturesActivity" />
+        <activity android:name=".screens.files.FilesActivity" />
+        <activity android:name=".screens.fragments.FragmentActivity" />
         <activity
-            android:name="com.tilseier.studying.screens.save_instance_state.SaveStateActivity"/>
-        <activity android:name="com.tilseier.studying.screens.fragment_state_loss.StateLossActivity" />
-        <activity android:name="com.tilseier.studying.screens.fragment_state_loss.StateLossSecondActivity" />
-        <activity android:name="com.tilseier.studying.screens.fragment_back_stack.FragmentBackStackActivity" />
-        <activity android:name="com.tilseier.studying.screens.constraint_features.ConstraintSetsActivity" />
-        <activity android:name="com.tilseier.studying.screens.constraint_features.ConstraintFeaturesActivity" />
-        <activity android:name="com.tilseier.studying.screens.files.FilesActivity" />
-        <activity android:name="com.tilseier.studying.screens.fragments.FragmentActivity" />
-        <activity
-            android:name="com.tilseier.studying.screens.ai.emotion_recognizer.EmotionRecognizerActivity"
+            android:name=".screens.ai.emotion_recognizer.EmotionRecognizerActivity"
             android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->
@@ -32,16 +34,16 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name="com.tilseier.studying.screens.ai.face_recognizer.FaceRecognizerActivity" />
-        <activity android:name="com.tilseier.studying.screens.retrofit.RetrofitActivity" />
-        <activity android:name="com.tilseier.studying.screens.dagger.DaggerActivity3" />
-        <activity android:name="com.tilseier.studying.screens.dagger.DaggerActivity2" />
-        <activity android:name="com.tilseier.studying.screens.dagger.DaggerActivity" />
-        <activity android:name="com.tilseier.studying.screens.rxjava.RxActivity" />
-        <activity android:name="com.tilseier.studying.screens.eventbus.PublisherActivity" />
-        <activity android:name="com.tilseier.studying.screens.service.ServiceActivity" />
+        <activity android:name=".screens.ai.face_recognizer.FaceRecognizerActivity" />
+        <activity android:name=".screens.retrofit.RetrofitActivity" />
+        <activity android:name=".screens.dagger.DaggerActivity3" />
+        <activity android:name=".screens.dagger.DaggerActivity2" />
+        <activity android:name=".screens.dagger.DaggerActivity" />
+        <activity android:name=".screens.rxjava.RxActivity" />
+        <activity android:name=".screens.eventbus.PublisherActivity" />
+        <activity android:name=".screens.service.ServiceActivity" />
         <activity
-            android:name="com.tilseier.studying.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,18 +52,25 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.tilseier.studying.screens.service.MyService" />
+        <service android:name=".screens.service.MyService" />
         <service
-            android:name="com.tilseier.studying.screens.service.MyIntentService"
+            android:name=".screens.service.MyIntentService"
             android:exported="false" />
         <service
-            android:name="com.tilseier.studying.screens.service.MyJobIntentService"
+            android:name=".screens.service.MyJobIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".screens.job_schedulers.job_scheduler.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name=".screens.job_schedulers.alarm_manager.AlertReceiver" />
     </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
 </manifest>

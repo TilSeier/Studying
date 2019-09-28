@@ -72,6 +72,7 @@ public interface JsonPlaceHolderApi {
     Call<Post> createPost3(@FieldMap Map<String, String> fields);
 
     //Change Whole Object
+    //To change few fields we should send all fields
     @PUT("posts/{id}")
     Call<Post> putPost(@Path("id") String id, @Body Post post);
 
@@ -82,6 +83,7 @@ public interface JsonPlaceHolderApi {
                                   @Body Post post);
 
     //Change Only Exist Object's Fields
+    //To change few field we should send only this fields
     @PATCH("posts/{id}")
     Call<Post> patchPost(@Path("id") String id, @Body Post post);
 

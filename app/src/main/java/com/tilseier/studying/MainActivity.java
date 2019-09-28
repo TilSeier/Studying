@@ -24,6 +24,8 @@ import com.tilseier.studying.screens.files.FilesActivity;
 import com.tilseier.studying.screens.fragment_back_stack.FragmentBackStackActivity;
 import com.tilseier.studying.screens.fragment_state_loss.StateLossActivity;
 import com.tilseier.studying.screens.fragments.FragmentActivity;
+import com.tilseier.studying.screens.job_schedulers.alarm_manager.AlarmManagerActivity;
+import com.tilseier.studying.screens.job_schedulers.job_scheduler.JobSchedulerActivity;
 import com.tilseier.studying.screens.observer.JobSearch;
 import com.tilseier.studying.screens.retrofit.RetrofitActivity;
 import com.tilseier.studying.screens.rxjava.RxActivity;
@@ -43,7 +45,7 @@ import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements MainMenuItemsAdapter.MainMenuItemsListener {
 
-    private static final String TAG = "StateLossActivity";
+    private static final String TAG = "MainActivity";
 
     RecyclerView rvMainMenu;
     MainMenuItemsAdapter adapter;
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
         ArrayList<MainMenuItem> mainMenuItems = new ArrayList<>();
 
+
+        //we use second parameter or third
         mainMenuItems.add(new MainMenuItem("Services", new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
             int example = 0;
             onBtnObserverClick(view);
         }, "onBtnObserverClick"));
-        
+
         mainMenuItems.add(new MainMenuItem("EventBus", this::onBtnEventBusClick, "onBtnEventBusClick"));
         mainMenuItems.add(new MainMenuItem("Singleton", this::onBtnSingletonClick, "onBtnSingletonClick"));
         mainMenuItems.add(new MainMenuItem("Sort", this::onBtnSortClick, "onBtnSortClick"));
@@ -89,6 +93,8 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
         mainMenuItems.add(new MainMenuItem("Fragment StateLoss", this::onBtnStateLossClick, "onBtnStateLossClick"));
         mainMenuItems.add(new MainMenuItem("Fragment BackStack", this::onBtnFragmentBackStackClick, "onBtnFragmentBackStackClick"));
+        mainMenuItems.add(new MainMenuItem("Job Scheduler", this::onBtnJobSchedulerClick, "onBtnJobSchedulerClick"));
+        mainMenuItems.add(new MainMenuItem("Alarm Manager", this::onBtnAlarmManagerClick, "onBtnAlarmManagerClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -329,7 +335,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         Intent intent = new Intent(this, SaveStateActivity.class);
 
         intent.putExtra("user", new UserModel(1, 40, "Chris Pratt", "man"));
-        intent.putExtra("activity", "StateLossActivity");
+        intent.putExtra("activity", "MainActivity");
         startActivity(intent);
     }
 
@@ -340,6 +346,16 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
     public void onBtnFragmentBackStackClick(View view){
         Intent intent = new Intent(this, FragmentBackStackActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnJobSchedulerClick(View view) {
+        Intent intent = new Intent(this, JobSchedulerActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnAlarmManagerClick(View view) {
+        Intent intent = new Intent(this, AlarmManagerActivity.class);
         startActivity(intent);
     }
 
