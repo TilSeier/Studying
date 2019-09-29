@@ -101,4 +101,7 @@ dependencies {
     //AI Face Recognizer
     implementation 'com.microsoft.projectoxford:face:1.4.3'
 
+    //LeakCanary - to detect memory leaks
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
+
 }

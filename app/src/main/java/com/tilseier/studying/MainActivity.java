@@ -26,6 +26,7 @@ import com.tilseier.studying.screens.fragment_state_loss.StateLossActivity;
 import com.tilseier.studying.screens.fragments.FragmentActivity;
 import com.tilseier.studying.screens.job_schedulers.alarm_manager.AlarmManagerActivity;
 import com.tilseier.studying.screens.job_schedulers.job_scheduler.JobSchedulerActivity;
+import com.tilseier.studying.screens.memory_leak.MemoryLeakActivity;
 import com.tilseier.studying.screens.observer.JobSearch;
 import com.tilseier.studying.screens.retrofit.RetrofitActivity;
 import com.tilseier.studying.screens.rxjava.RxActivity;
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Fragment BackStack", this::onBtnFragmentBackStackClick, "onBtnFragmentBackStackClick"));
         mainMenuItems.add(new MainMenuItem("Job Scheduler", this::onBtnJobSchedulerClick, "onBtnJobSchedulerClick"));
         mainMenuItems.add(new MainMenuItem("Alarm Manager", this::onBtnAlarmManagerClick, "onBtnAlarmManagerClick"));
+        mainMenuItems.add(new MainMenuItem("Memory Leak", this::onBtnMemoryLeakClick, "onBtnMemoryLeakClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -359,6 +361,11 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         startActivity(intent);
     }
 
+    public void onBtnMemoryLeakClick(View view) {
+        Intent intent = new Intent(this, MemoryLeakActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -422,4 +429,18 @@ enum Singleton{
     void show(String str){
         System.out.println(str+i);
     }
+}
+
+//SomeGeneric<Integer, String, Float, Double, Short, Long, String, ArrayList> someGeneric = new SomeGeneric<>();
+class SomeGeneric<K extends Number, D, F, R, M, L, S, T>{
+
+    K kElement;
+    D dElement;
+    F fElement;
+    R rElement;
+    M mElement;
+    L lElement;
+    S sElement;
+    T tElement;
+
 }
