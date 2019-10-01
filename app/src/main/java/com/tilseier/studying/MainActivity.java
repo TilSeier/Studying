@@ -29,6 +29,7 @@ import com.tilseier.studying.screens.job_schedulers.job_scheduler.JobSchedulerAc
 import com.tilseier.studying.screens.memory_leak.MemoryLeakActivity;
 import com.tilseier.studying.screens.observer.JobSearch;
 import com.tilseier.studying.screens.retrofit.RetrofitActivity;
+import com.tilseier.studying.screens.retrofit2_rxjava.Retrofit2RxJavaActivity;
 import com.tilseier.studying.screens.rxjava.RxActivity;
 import com.tilseier.studying.screens.save_instance_state.SaveStateActivity;
 import com.tilseier.studying.screens.service.ServiceActivity;
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Job Scheduler", this::onBtnJobSchedulerClick, "onBtnJobSchedulerClick"));
         mainMenuItems.add(new MainMenuItem("Alarm Manager", this::onBtnAlarmManagerClick, "onBtnAlarmManagerClick"));
         mainMenuItems.add(new MainMenuItem("Memory Leak", this::onBtnMemoryLeakClick, "onBtnMemoryLeakClick"));
+        mainMenuItems.add(new MainMenuItem("Retrofit2 + RxJava", this::onBtnRetrofit2RxJavaClick, "onBtnRetrofit2RxJavaClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -363,6 +365,11 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
     public void onBtnMemoryLeakClick(View view) {
         Intent intent = new Intent(this, MemoryLeakActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnRetrofit2RxJavaClick(View view) {
+        Intent intent = new Intent(this, Retrofit2RxJavaActivity.class);
         startActivity(intent);
     }
 
