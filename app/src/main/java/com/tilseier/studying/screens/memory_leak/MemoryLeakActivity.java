@@ -92,7 +92,7 @@ public class MemoryLeakActivity extends AppCompatActivity {
     }
 
 
-    //We do AsyncTask class static to avoid implicit dependency with superclass, eventually leading to memory leaks
+    //We do AsyncTask class "static" to avoid implicit dependency with superclass, eventually leading to memory leaks
     private static class MyAsyncTaskWithNoMemoryLeak extends AsyncTask<Void, Void, Void>{
 
         private WeakReference<Context> mContext;

@@ -38,7 +38,7 @@ public class EmotionRecognizerActivity extends AppCompatActivity {
 
     private static final String FACE_ENDPOINT = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0";///detect?
     //returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=emotion&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01
-    private static final String FACE_SUBSCRIPTION_KEY = "3e80f4258a5d4a89964c4c1d89efa552";
+    private static final String FACE_SUBSCRIPTION_KEY = "661b25128df744639f8b288a7f985dbc";//"3e80f4258a5d4a89964c4c1d89efa552";
 
     // <snippet_mainactivity_fields>
     // Add your Face endpoint to your environment variables.
@@ -150,14 +150,12 @@ public class EmotionRecognizerActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableSingleObserver<Face[]>() {
-
                     @Override
                     protected void onStart() {
                         super.onStart();
                         Log.e(TAG, "onStart");
                         detectionProgressDialog.show();
                     }
-
                     @Override
                     public void onSuccess(Face[] faces) {
 
@@ -174,7 +172,6 @@ public class EmotionRecognizerActivity extends AppCompatActivity {
                         imageBitmap.recycle();
 
                     }
-
                     @Override
                     public void onError(Throwable e) {
                         detectionProgressDialog.dismiss();
@@ -182,8 +179,6 @@ public class EmotionRecognizerActivity extends AppCompatActivity {
 //                        Toast.makeText(EmotionRecognizerActivity.this, String.format("Detection failed: %s", e.getMessage()), Toast.LENGTH_LONG).show();
                     }
                 });
-int[] a = {};
-        System.out.println(010==10);
 
 //        AsyncTask<InputStream, String, Face[]> detectTask =
 //                new AsyncTask<InputStream, String, Face[]>() {
