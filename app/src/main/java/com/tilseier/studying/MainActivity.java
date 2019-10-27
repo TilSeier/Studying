@@ -17,7 +17,10 @@ import com.tilseier.studying.screens.ai.face_recognizer.FaceRecognizerActivity;
 import com.tilseier.studying.screens.collections.MyCollections;
 import com.tilseier.studying.screens.constraint_features.ConstraintFeaturesActivity;
 import com.tilseier.studying.screens.constraint_features.ConstraintSetsActivity;
+import com.tilseier.studying.screens.dagger.DaggerActivity;
+import com.tilseier.studying.screens.dagger.DaggerActivity2;
 import com.tilseier.studying.screens.dagger.DaggerActivity3;
+import com.tilseier.studying.screens.dagger.DaggerActivityCodeInFlow;
 import com.tilseier.studying.screens.eventbus.CustomMessageEvent;
 import com.tilseier.studying.screens.eventbus.PublisherActivity;
 import com.tilseier.studying.screens.files.FilesActivity;
@@ -81,7 +84,10 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Singleton", this::onBtnSingletonClick, "onBtnSingletonClick"));
         mainMenuItems.add(new MainMenuItem("Sort", this::onBtnSortClick, "onBtnSortClick"));
         mainMenuItems.add(new MainMenuItem("Rx Java", this::onRxJavaClick, "onRxJavaClick"));
-        mainMenuItems.add(new MainMenuItem("Dagger", this::onBtnDaggerClick, "onBtnDaggerClick"));
+        mainMenuItems.add(new MainMenuItem("Dagger 1", this::onBtnDaggerClick, "onBtnDaggerClick"));
+        mainMenuItems.add(new MainMenuItem("Dagger 2", this::onBtnDagger2Click, "onBtnDagger2Click"));
+        mainMenuItems.add(new MainMenuItem("Dagger 3", this::onBtnDagger3Click, "onBtnDagger3Click"));
+        mainMenuItems.add(new MainMenuItem("Dagger 4 (Code in Flow)", this::onBtnDagger4Click, "onBtnDagger4Click"));
         mainMenuItems.add(new MainMenuItem("Retrofit", this::onBtnRetrofitClick, "onBtnRetrofitClick"));
         mainMenuItems.add(new MainMenuItem("Collection", this::onBtnCollectionClick, "onBtnCollectionClick"));
         mainMenuItems.add(new MainMenuItem("Fragments", this::onBtnFragmentsClick, "onBtnFragmentsClick"));
@@ -90,9 +96,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Constraint Sets", this::onBtnConstraintSetsClick, "onBtnConstraintSetsClick"));
         mainMenuItems.add(new MainMenuItem("AI Emotions Recognizer", this::onBtnAIEmotionRecognizerClick, "onBtnAIEmotionRecognizerClick"));
         mainMenuItems.add(new MainMenuItem("AI Face Recognizer", this::onBtnAIFaceRecognizerClick, "onBtnAIFaceRecognizerClick"));
-
         mainMenuItems.add(new MainMenuItem("Save State + Parcelable", this::onBtnSaveStateClick, "onBtnSaveStateClick"));
-
         mainMenuItems.add(new MainMenuItem("Fragment StateLoss", this::onBtnStateLossClick, "onBtnStateLossClick"));
         mainMenuItems.add(new MainMenuItem("Fragment BackStack", this::onBtnFragmentBackStackClick, "onBtnFragmentBackStackClick"));
         mainMenuItems.add(new MainMenuItem("Job Scheduler", this::onBtnJobSchedulerClick, "onBtnJobSchedulerClick"));
@@ -168,7 +172,22 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
     }
 
     public void onBtnDaggerClick(View view){
+        Intent intent = new Intent(this, DaggerActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnDagger2Click(View view){
+        Intent intent = new Intent(this, DaggerActivity2.class);
+        startActivity(intent);
+    }
+
+    public void onBtnDagger3Click(View view){
         Intent intent = new Intent(this, DaggerActivity3.class);
+        startActivity(intent);
+    }
+
+    public void onBtnDagger4Click(View view){
+        Intent intent = new Intent(this, DaggerActivityCodeInFlow.class);
         startActivity(intent);
     }
 

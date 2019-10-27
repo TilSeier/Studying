@@ -12,7 +12,7 @@ import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 import com.tilseier.studying.R;
 import com.tilseier.studying.screens.dagger.di2.adapter.RandomUserAdapter;
-import com.tilseier.studying.screens.dagger.di2.di.ContextModule;
+import com.tilseier.studying.screens.dagger.di2.di.modules.ContextModule;
 import com.tilseier.studying.screens.dagger.di2.di.DaggerRandomUserComponent;
 import com.tilseier.studying.screens.dagger.di2.di.RandomUserComponent;
 import com.tilseier.studying.screens.dagger.di2.interfaces.RandomUsersApi;

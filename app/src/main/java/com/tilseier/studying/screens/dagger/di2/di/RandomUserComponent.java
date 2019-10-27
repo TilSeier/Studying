@@ -1,6 +1,8 @@
 package com.tilseier.studying.screens.dagger.di2.di;
 
 import com.squareup.picasso.Picasso;
+import com.tilseier.studying.screens.dagger.di2.di.modules.PicassoModule;
+import com.tilseier.studying.screens.dagger.di2.di.modules.RandomUsersModule;
 import com.tilseier.studying.screens.dagger.di2.interfaces.RandomUsersApi;
 
 import dagger.Component;

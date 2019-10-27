@@ -1,6 +1,9 @@
-package com.tilseier.studying.screens.dagger.di2.di;
+package com.tilseier.studying.screens.dagger.di2.di.modules;
 
 import android.content.Context;
+
+import com.tilseier.studying.screens.dagger.di2.di.ApplicationContext;
+import com.tilseier.studying.screens.dagger.di2.di.RandomUserApplicationScope;
 
 import dagger.Module;
 import dagger.Provides;

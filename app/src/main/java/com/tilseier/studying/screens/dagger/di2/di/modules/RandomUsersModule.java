@@ -1,7 +1,8 @@
-package com.tilseier.studying.screens.dagger.di2.di;
+package com.tilseier.studying.screens.dagger.di2.di.modules;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.tilseier.studying.screens.dagger.di2.di.RandomUserApplicationScope;
 import com.tilseier.studying.screens.dagger.di2.interfaces.RandomUsersApi;
 
 import dagger.Module;

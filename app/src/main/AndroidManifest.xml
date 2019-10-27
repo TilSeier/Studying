@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".screens.retrofit2_rxjava.Retrofit2RxJavaActivity"></activity>
-        <!-- Emoji font will be downloaded when the app is installed from Play Stote -->
+        <activity android:name=".screens.dagger.DaggerActivityCodeInFlow"></activity>
+        <activity android:name=".screens.retrofit2_rxjava.Retrofit2RxJavaActivity" /> <!-- Emoji font will be downloaded when the app is installed from Play Stote -->
         <!-- <meta-data android:name="fontProviderRequests" -->
         <!-- android:value="Noto Color Emoji Compat"/> -->
         <activity android:name=".screens.memory_leak.MemoryLeakActivity" />
@@ -70,12 +70,12 @@
             android:name=".screens.job_schedulers.job_scheduler.JobSchedulerService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 </manifest>

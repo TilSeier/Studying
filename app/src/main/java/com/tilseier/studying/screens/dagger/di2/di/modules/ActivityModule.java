@@ -1,7 +1,9 @@
-package com.tilseier.studying.screens.dagger.di2.di;
+package com.tilseier.studying.screens.dagger.di2.di.modules;
 
 import android.app.Activity;
 import android.content.Context;
+
+import com.tilseier.studying.screens.dagger.di2.di.RandomUserApplicationScope;
 
 import javax.inject.Named;
 

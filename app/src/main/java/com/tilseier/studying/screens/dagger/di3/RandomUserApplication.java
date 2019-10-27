@@ -3,7 +3,7 @@ package com.tilseier.studying.screens.dagger.di3;
 import android.app.Activity;
 import android.app.Application;
 
-import com.tilseier.studying.screens.dagger.di2.di.ContextModule;
+import com.tilseier.studying.screens.dagger.di2.di.modules.ContextModule;
 import com.tilseier.studying.screens.dagger.di2.di.DaggerRandomUserComponent;
 import com.tilseier.studying.screens.dagger.di2.di.RandomUserComponent;
 
