@@ -8,7 +8,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     dataBinding {
@@ -43,16 +43,24 @@ android {
 }
 
 dependencies {
+    def lifecycle_version = "2.1.0"
+    def room_version = "2.2.1"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:support-v4:28.0.0'
+//    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "androidx.appcompat:appcompat:1.1.0"
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//    implementation 'com.android.support:support-v4:28.0.0'
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //Design
-    implementation 'com.android.support:design:28.0.0'
+//    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
 
     //EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
@@ -68,10 +76,12 @@ dependencies {
     annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
 
     //RecyclerView
-    implementation 'com.android.support:recyclerview-v7:28.0.0'
+//    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
 
     //CardView
-    implementation 'com.android.support:cardview-v7:28.0.0'
+//    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation "androidx.cardview:cardview:1.0.0"
 
     //Retrofit2
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
@@ -104,5 +114,24 @@ dependencies {
 
     //LeakCanary - to detect memory leaks
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
+
+
+    //MVVM Clean Architecture
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    //OR
+//    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    //Room components
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+
+    //Migrate from android.support to AndroidX: https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
+    //ALL DEPENDENCIES here: https://developer.android.com/jetpack/androidx/releases/lifecycle
+    //DEPENDENCIES LATEST VERSION Google’s Maven Repository: https://maven.google.com/web/index.html
+    //DEPENDENCIES LATEST VERSION MVN Repository: https://mvnrepository.com/artifact/com.google.android.material/material
 
 }

@@ -5,8 +5,6 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -15,6 +13,9 @@ import com.tilseier.studying.R;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 public class AlarmManagerActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 

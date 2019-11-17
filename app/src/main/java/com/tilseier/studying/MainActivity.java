@@ -2,9 +2,6 @@ package com.tilseier.studying;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -12,6 +9,7 @@ import android.widget.Toast;
 import com.tilseier.studying.adapters.MainMenuItemsAdapter;
 import com.tilseier.studying.models.MainMenuItem;
 import com.tilseier.studying.models.UserModel;
+import com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMArchitectureActivity;
 import com.tilseier.studying.screens.ai.emotion_recognizer.EmotionRecognizerActivity;
 import com.tilseier.studying.screens.ai.face_recognizer.FaceRecognizerActivity;
 import com.tilseier.studying.screens.collections.MyCollections;
@@ -46,6 +44,9 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements MainMenuItemsAdapter.MainMenuItemsListener {
@@ -103,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Alarm Manager", this::onBtnAlarmManagerClick, "onBtnAlarmManagerClick"));
         mainMenuItems.add(new MainMenuItem("Memory Leak", this::onBtnMemoryLeakClick, "onBtnMemoryLeakClick"));
         mainMenuItems.add(new MainMenuItem("Retrofit2 + RxJava", this::onBtnRetrofit2RxJavaClick, "onBtnRetrofit2RxJavaClick"));
+        mainMenuItems.add(new MainMenuItem("MVVM Architecture", this::onBtnMVVMArchitectureClick, "onBtnMVVMArchitectureClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -389,6 +391,11 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
     public void onBtnRetrofit2RxJavaClick(View view) {
         Intent intent = new Intent(this, Retrofit2RxJavaActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnMVVMArchitectureClick(View view) {
+        Intent intent = new Intent(this, MVVMArchitectureActivity.class);
         startActivity(intent);
     }
 

@@ -1,9 +1,10 @@
 package com.tilseier.studying.screens.thread;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.tilseier.studying.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ThreadActivity extends AppCompatActivity {
     Thread t = null;

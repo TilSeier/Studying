@@ -1,19 +1,20 @@
 package com.tilseier.studying.screens.service;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.tilseier.studying.R;
-import com.tilseier.studying.databinding.ActivityServiceBinding;
 
 import java.util.Random;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+
 public class ServiceActivity extends AppCompatActivity {
 
-    ActivityServiceBinding mBinding;
+    ViewDataBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,6 @@ public class ServiceActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_service);
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_service);
-
-
 
     }
 

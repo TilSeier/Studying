@@ -2,11 +2,12 @@ package com.tilseier.studying.screens.fragment_state_loss;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 import com.tilseier.studying.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 public class StateLossActivity extends AppCompatActivity {
     private boolean allowStateLoss;

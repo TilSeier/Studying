@@ -1,6 +1,5 @@
 package com.tilseier.studying.screens.dagger;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.tilseier.studying.R;
@@ -10,6 +9,8 @@ import com.tilseier.studying.screens.dagger.di.Cash;
 import com.tilseier.studying.screens.dagger.di.DaggerAppComponent;
 import com.tilseier.studying.screens.dagger.di.Soldiers;
 import com.tilseier.studying.screens.dagger.di.War;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DaggerActivity extends AppCompatActivity {
 

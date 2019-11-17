@@ -4,12 +4,12 @@ import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.tilseier.studying.R;
 
+import androidx.appcompat.app.AppCompatActivity;
 import timber.log.Timber;
 
 //FROM API 21

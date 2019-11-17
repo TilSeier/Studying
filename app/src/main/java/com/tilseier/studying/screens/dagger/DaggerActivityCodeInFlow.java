@@ -1,7 +1,6 @@
 package com.tilseier.studying.screens.dagger;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.tilseier.studying.R;
 import com.tilseier.studying.screens.dagger.di_code_in_flow.CarComponent;
@@ -9,6 +8,8 @@ import com.tilseier.studying.screens.dagger.di_code_in_flow.DaggerCarComponent;
 import com.tilseier.studying.screens.dagger.di_code_in_flow.models.Car;
 
 import javax.inject.Inject;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DaggerActivityCodeInFlow extends AppCompatActivity {
 

@@ -7,9 +7,10 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
 
 import com.tilseier.studying.R;
+
+import androidx.core.app.NotificationCompat;
 
 public class NotificationHelper extends ContextWrapper {
     public static final String channel1ID = "channel1ID";

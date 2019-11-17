@@ -1,11 +1,12 @@
 package com.tilseier.studying.screens.retrofit2_rxjava.adapters;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
 import com.tilseier.studying.R;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class PostViewHolder extends RecyclerView.ViewHolder {
     TextView tvTitle, tvContent, tvAuthor;

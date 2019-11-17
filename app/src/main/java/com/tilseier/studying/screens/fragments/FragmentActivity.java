@@ -1,9 +1,10 @@
 package com.tilseier.studying.screens.fragments;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.tilseier.studying.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class FragmentActivity extends AppCompatActivity implements FragmentA.FragmentAListener, FragmentB.FragmentBListener {
 

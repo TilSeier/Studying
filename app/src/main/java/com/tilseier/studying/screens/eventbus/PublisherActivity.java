@@ -1,12 +1,13 @@
 package com.tilseier.studying.screens.eventbus;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.tilseier.studying.R;
 
 import org.greenrobot.eventbus.EventBus;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class PublisherActivity extends AppCompatActivity {
 

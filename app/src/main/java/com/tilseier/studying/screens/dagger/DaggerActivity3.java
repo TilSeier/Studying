@@ -1,10 +1,6 @@
 package com.tilseier.studying.screens.dagger;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,9 +8,9 @@ import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 import com.tilseier.studying.R;
 import com.tilseier.studying.screens.dagger.di2.adapter.RandomUserAdapter;
-import com.tilseier.studying.screens.dagger.di2.di.modules.ContextModule;
 import com.tilseier.studying.screens.dagger.di2.di.DaggerRandomUserComponent;
 import com.tilseier.studying.screens.dagger.di2.di.RandomUserComponent;
+import com.tilseier.studying.screens.dagger.di2.di.modules.ContextModule;
 import com.tilseier.studying.screens.dagger.di2.interfaces.RandomUsersApi;
 import com.tilseier.studying.screens.dagger.di2.model.RandomUsers;
 import com.tilseier.studying.screens.dagger.di3.DaggerMainActivityComponent;
@@ -26,6 +22,10 @@ import java.io.File;
 
 import javax.inject.Inject;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

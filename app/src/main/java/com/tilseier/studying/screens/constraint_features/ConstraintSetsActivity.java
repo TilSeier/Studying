@@ -1,8 +1,5 @@
 package com.tilseier.studying.screens.constraint_features;
 
-import android.support.constraint.ConstraintLayout;
-import android.support.constraint.ConstraintSet;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.ChangeBounds;
 import android.transition.Transition;
@@ -11,6 +8,10 @@ import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
 import com.tilseier.studying.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 public class ConstraintSetsActivity extends AppCompatActivity {
 

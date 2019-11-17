@@ -5,13 +5,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.tilseier.studying.R;
 
 import java.lang.ref.WeakReference;
 
+import androidx.appcompat.app.AppCompatActivity;
 import timber.log.Timber;
 
 public class MemoryLeakActivity extends AppCompatActivity {

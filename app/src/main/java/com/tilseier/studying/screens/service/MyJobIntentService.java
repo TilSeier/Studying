@@ -3,9 +3,9 @@ package com.tilseier.studying.screens.service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
-import android.support.v4.app.JobIntentService;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.JobIntentService;
 import timber.log.Timber;
 
 public class MyJobIntentService extends JobIntentService {

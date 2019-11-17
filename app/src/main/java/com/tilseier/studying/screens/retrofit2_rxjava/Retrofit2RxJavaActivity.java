@@ -1,9 +1,6 @@
 package com.tilseier.studying.screens.retrofit2_rxjava;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
 import com.tilseier.studying.R;
 import com.tilseier.studying.screens.retrofit2_rxjava.Retrofit.IMyAPI;
@@ -13,6 +10,9 @@ import com.tilseier.studying.screens.retrofit2_rxjava.models.Post;
 
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;

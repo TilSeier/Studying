@@ -1,11 +1,12 @@
 package com.tilseier.studying.screens.constraint_features;
 
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.TransitionManager;
 
 import com.tilseier.studying.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class ConstraintFeaturesActivity extends AppCompatActivity {
 
