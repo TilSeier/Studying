@@ -34,7 +34,11 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
 
     public void setNotes(List<Note> notes){
         this.notes = notes;
-        notifyDataSetChanged();//it is bad practice to use this method in the adapter
+        notifyDataSetChanged();//it is bad practice to use this method in the adapter// instead we can use notifyItemChanged and so on
+    }
+
+    public Note getNoteAt(int position){
+        return notes.get(position);
     }
 
     @Override
