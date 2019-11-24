@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMAddNoteActivity">
+    tools:context="com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMAddEditNoteActivity">
 
     <EditText
         android:id="@+id/et_title"

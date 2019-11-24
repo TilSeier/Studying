@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMAddNoteActivity"
+        <activity android:name=".screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMAddEditNoteActivity"
             android:parentActivityName=".screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMArchitectureActivity"
             android:theme="@style/AppTheme.WithActionBar"/>
         <activity android:name=".screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMArchitectureActivity"

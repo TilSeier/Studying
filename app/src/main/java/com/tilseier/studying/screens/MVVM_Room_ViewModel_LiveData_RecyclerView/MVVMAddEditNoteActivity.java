@@ -13,8 +13,10 @@ import com.tilseier.studying.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MVVMAddNoteActivity extends AppCompatActivity {
+public class MVVMAddEditNoteActivity extends AppCompatActivity {
 
+    public static final String EXTRA_ID =
+            "com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.EXTRA_ID";
     public static final String EXTRA_TITLE =
             "com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.EXTRA_TITLE";
     public static final String EXTRA_DESCRIPTION =
@@ -34,14 +36,22 @@ public class MVVMAddNoteActivity extends AppCompatActivity {
         if (getSupportActionBar()!=null) {
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
         }
-        setTitle("Add Note");
 
         etTitle = findViewById(R.id.et_title);
         etDescription = findViewById(R.id.et_description);
         npPriority = findViewById(R.id.np_priority);
-
         npPriority.setMinValue(1);
         npPriority.setMaxValue(10);
+
+        Intent intent = getIntent();
+        if (intent.hasExtra(EXTRA_ID)){
+            setTitle("Edit Note");
+            etTitle.setText(intent.getStringExtra(EXTRA_TITLE));
+            etDescription.setText(intent.getStringExtra(EXTRA_DESCRIPTION));
+            npPriority.setValue(intent.getIntExtra(EXTRA_PRIORITY, 1));
+        } else {
+            setTitle("Add Note");
+        }
 
     }
 
@@ -59,6 +69,11 @@ public class MVVMAddNoteActivity extends AppCompatActivity {
         data.putExtra(EXTRA_TITLE, title);
         data.putExtra(EXTRA_DESCRIPTION, description);
         data.putExtra(EXTRA_PRIORITY, priority);
+
+        int id = getIntent().getIntExtra(EXTRA_ID, -1);
+        if (id != -1){
+            data.putExtra(EXTRA_ID, id);
+        }
 
         setResult(RESULT_OK, data);
         finish();
