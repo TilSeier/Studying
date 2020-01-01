@@ -9,7 +9,9 @@ import android.widget.Toast;
 import com.tilseier.studying.adapters.MainMenuItemsAdapter;
 import com.tilseier.studying.models.MainMenuItem;
 import com.tilseier.studying.models.UserModel;
+import com.tilseier.studying.screens.FragmentManager.FragmentManagerActivity;
 import com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMArchitectureActivity;
+import com.tilseier.studying.screens.NavigationComponent.NavigationComponentActivity;
 import com.tilseier.studying.screens.ai.emotion_recognizer.EmotionRecognizerActivity;
 import com.tilseier.studying.screens.ai.face_recognizer.FaceRecognizerActivity;
 import com.tilseier.studying.screens.collections.MyCollections;
@@ -105,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Memory Leak", this::onBtnMemoryLeakClick, "onBtnMemoryLeakClick"));
         mainMenuItems.add(new MainMenuItem("Retrofit2 + RxJava", this::onBtnRetrofit2RxJavaClick, "onBtnRetrofit2RxJavaClick"));
         mainMenuItems.add(new MainMenuItem("MVVM Architecture", this::onBtnMVVMArchitectureClick, "onBtnMVVMArchitectureClick"));
+        mainMenuItems.add(new MainMenuItem("Navigation Controller", this::onBtnNavigationControllerClick, "onBtnNavigationControllerClick"));
+        mainMenuItems.add(new MainMenuItem("Fragment Manager (BackStack)", this::onBtnFragmentManagerClick, "onBtnFragmentManagerClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -399,6 +403,16 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         startActivity(intent);
     }
 
+    public void onBtnNavigationControllerClick(View view) {
+        Intent intent = new Intent(this, NavigationComponentActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnFragmentManagerClick(View view) {
+        Intent intent = new Intent(this, FragmentManagerActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -434,8 +448,6 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         super.onRestart();
         Timber.tag(TAG).e("onRestart");
     }
-
-
 
     @Override
     public void onItemClick(String methodName, View view) {
