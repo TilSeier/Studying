@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".screens.FragmentManager.FragmentManagerActivity"></activity>
+        <activity android:name=".screens.Sockets.SocketsActivity"></activity>
+        <activity android:name=".screens.FragmentManager.FragmentManagerActivity" />
         <activity android:name=".screens.NavigationComponent.NavigationComponentActivity" />
         <activity
             android:name=".screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMAddEditNoteActivity"

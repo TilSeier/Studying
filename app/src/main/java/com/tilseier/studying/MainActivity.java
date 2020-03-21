@@ -12,6 +12,7 @@ import com.tilseier.studying.models.UserModel;
 import com.tilseier.studying.screens.FragmentManager.FragmentManagerActivity;
 import com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMArchitectureActivity;
 import com.tilseier.studying.screens.NavigationComponent.NavigationComponentActivity;
+import com.tilseier.studying.screens.Sockets.SocketsActivity;
 import com.tilseier.studying.screens.ai.emotion_recognizer.EmotionRecognizerActivity;
 import com.tilseier.studying.screens.ai.face_recognizer.FaceRecognizerActivity;
 import com.tilseier.studying.screens.collections.MyCollections;
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("MVVM Architecture", this::onBtnMVVMArchitectureClick, "onBtnMVVMArchitectureClick"));
         mainMenuItems.add(new MainMenuItem("Navigation Controller", this::onBtnNavigationControllerClick, "onBtnNavigationControllerClick"));
         mainMenuItems.add(new MainMenuItem("Fragment Manager (BackStack)", this::onBtnFragmentManagerClick, "onBtnFragmentManagerClick"));
+        mainMenuItems.add(new MainMenuItem("Sockets", this::onBtnSocketClick, "onBtnSocketClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -410,6 +412,11 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
     public void onBtnFragmentManagerClick(View view) {
         Intent intent = new Intent(this, FragmentManagerActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnSocketClick(View view) {
+        Intent intent = new Intent(this, SocketsActivity.class);
         startActivity(intent);
     }
 
