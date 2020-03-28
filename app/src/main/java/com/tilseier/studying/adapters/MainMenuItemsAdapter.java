@@ -69,8 +69,8 @@ public class MainMenuItemsAdapter extends RecyclerView.Adapter<MainMenuItemsAdap
         final MainMenuItem mainMenuItem = mainMenuItems.get(i);
 
         itemViewHolder.button.setText(mainMenuItem.getText());
-        itemViewHolder.button.setOnClickListener(mainMenuItem.getOnClickMethod());
-        itemViewHolder.button.setOnClickListener(new View.OnClickListener() {
+        itemViewHolder.button.setOnClickListener(mainMenuItem.getOnClickMethod());//this Listener
+        itemViewHolder.button.setOnClickListener(new View.OnClickListener() {//or this Listener
             @Override
             public void onClick(View view) {
                 if (listener != null) {

@@ -11,6 +11,7 @@ import com.tilseier.studying.models.MainMenuItem;
 import com.tilseier.studying.models.UserModel;
 import com.tilseier.studying.screens.FragmentManager.FragmentManagerActivity;
 import com.tilseier.studying.screens.MVVM_Room_ViewModel_LiveData_RecyclerView.MVVMArchitectureActivity;
+import com.tilseier.studying.screens.Model_View_ViewModel_CodingWithMitch.MitchMVVMActivity;
 import com.tilseier.studying.screens.NavigationComponent.NavigationComponentActivity;
 import com.tilseier.studying.screens.Sockets.SocketsActivity;
 import com.tilseier.studying.screens.ai.emotion_recognizer.EmotionRecognizerActivity;
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
         mainMenuItems.add(new MainMenuItem("Navigation Controller", this::onBtnNavigationControllerClick, "onBtnNavigationControllerClick"));
         mainMenuItems.add(new MainMenuItem("Fragment Manager (BackStack)", this::onBtnFragmentManagerClick, "onBtnFragmentManagerClick"));
         mainMenuItems.add(new MainMenuItem("Sockets", this::onBtnSocketClick, "onBtnSocketClick"));
+        mainMenuItems.add(new MainMenuItem("Mitch MVVM", this::onBtnMitchMVVMClick, "onBtnMitchMVVMClick"));
 
         rvMainMenu = findViewById(R.id.rv_main_menu);
         rvMainMenu.setHasFixedSize(true);
@@ -417,6 +419,11 @@ public class MainActivity extends AppCompatActivity implements MainMenuItemsAdap
 
     public void onBtnSocketClick(View view) {
         Intent intent = new Intent(this, SocketsActivity.class);
+        startActivity(intent);
+    }
+
+    public void onBtnMitchMVVMClick(View view) {
+        Intent intent = new Intent(this, MitchMVVMActivity.class);
         startActivity(intent);
     }
 
